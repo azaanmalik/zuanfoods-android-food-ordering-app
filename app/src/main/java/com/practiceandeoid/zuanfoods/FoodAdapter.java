@@ -47,13 +47,15 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
                 public void onClick(View view) {
 
+                    int selectedPosition = holder.getAdapterPosition();
+                    if (selectedPosition == RecyclerView.NO_POSITION) return;
                     Intent intent = new Intent(context, FoodDetailActivity.class);
 
-                    intent.putExtra(  "food_name", list.get(holder.getBindingAdapterPosition()).getFood_name());
+                    intent.putExtra(  "food_name", list.get(selectedPosition).getFood_name());
 
-                    intent.putExtra(  "food_price", list.get(holder.getBindingAdapterPosition()).getFood_price());
+                    intent.putExtra(  "food_price", list.get(selectedPosition).getFood_price());
 
-                    intent.putExtra( "food_image", list.get(holder.getBindingAdapterPosition()).getFood_image());
+                    intent.putExtra( "food_image", list.get(selectedPosition).getFood_image());
 
                     context.startActivity(intent);
 
