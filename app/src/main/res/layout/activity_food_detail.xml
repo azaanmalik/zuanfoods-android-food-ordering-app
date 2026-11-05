@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#F6E6F9"
+    tools:context=".FoodDetailActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:id="@+id/food_back"
+    android:contentDescription="Food App Demo"
+    android:padding="5dp"
+    android:src="@drawable/ic_food_back"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/food_fav"
+    android:contentDescription ="Food App Demo"
+    android:padding="5dp"
+    android:src="@drawable/ic_food_fav"
+    app:layout_constraintBottom_toBottomOf="@id/food_back"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/food_back"
+    >
+
+</ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="242dp"
+        android:layout_height="242dp"
+        android:id="@+id/cardview1"
+       android:layout_marginTop="20dp"
+        app:cardCornerRadius="121dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_fav"
+        >
+
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="food  app demo"
+            android:src="@drawable/foodimg1">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/food_name1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cardview1"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/food_price1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:text="food price"
+        android:textColor="@color/primary"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@id/food_name1"
+        app:layout_constraintStart_toStartOf="@id/food_name1"
+        app:layout_constraintTop_toBottomOf="@id/food_name1">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/food_deliveryinfolabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:text="Delivery Info"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_price1">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/food_deliveryinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:text="Delivered between Monday to Thursday from 8am to 9pm"
+        android:textColor="#717171"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_deliveryinfolabel">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/food_returninfolabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="15dp"
+        android:text="Return Policy"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_deliveryinfo">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/food_returninfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:text="All our foods are double checked before leaving our store so by any case you found a broken food our contact hot line immediately"
+        android:textColor="#717171"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_returninfolabel">
+
+    </TextView>
+    <Button
+ android:id="@+id/order_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary"
+        android:text="Order Now"
+        android:textSize="20sp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/food_returninfo"
+        ></Button>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

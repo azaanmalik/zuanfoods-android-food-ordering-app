@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:layout_marginTop="15dp"
+    >
+    <ImageView
+        android:id="@+id/food_menu"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/menu_icon"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+    <ImageView
+        android:id="@+id/food_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp"
+        android:src="@drawable/baseline_shopping_cart_24"
+        app:layout_constraintBottom_toBottomOf="@id/food_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/food_menu"
+        app:layout_constraintVertical_bias="0.727"></ImageView>
+
+    <FrameLayout
+        android:id="@+id/food_title_container"
+        android:layout_width="220dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/food_menu"
+        app:layout_constraintTop_toBottomOf="@id/food_menu">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/food_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/foodforyou" />
+
+    </FrameLayout>
+
+    <EditText
+        android:layout_width="314dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/food_search"
+        android:autofillHints=""
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:hint="Search..."
+        android:textSize="17sp"
+        android:drawableStart="@drawable/baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/food_title_container" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/food_tab"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="30dp"
+        android:isScrollContainer="true"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="@id/food_search"
+        app:layout_constraintStart_toStartOf="@id/food_search"
+        app:layout_constraintTop_toBottomOf="@id/food_search"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabIndicatorColor="@color/primary"
+        >
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/food_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/food_tab">
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

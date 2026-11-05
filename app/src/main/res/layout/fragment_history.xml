@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/heart_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:layout_alignBottom="@id/no_favorite_text"
+        android:contentDescription="Heart Icon"
+        android:src="@drawable/historyicon" />
+
+    <TextView
+        android:id="@+id/no_favorite_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="No History yet"
+        android:textSize="22sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <!-- Instruction Text -->
+    <TextView
+        android:id="@+id/instructions_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_alignTop="@id/no_favorite_text"
+        android:text="Hit the orange button down
+below to Create an order"
+        android:textSize="18sp"
+        android:textColor="#717171" />
+    <Button
+        android:id="@+id/BacktoHome"
+        android:text="Start Ordering"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </Button>
+</RelativeLayout>

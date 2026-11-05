@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="16dp">
+
+
+
+    <ImageView
+        android:id="@+id/heart_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_alignBottom="@id/no_favorite_text"
+        android:contentDescription="Heart Icon"
+        android:src="@drawable/ic_food_fav"
+        android:tint="#C7C7C7"/>
+
+    <TextView
+        android:id="@+id/no_favorite_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="No Favourites Yet"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <!-- Instruction Text -->
+    <TextView
+        android:id="@+id/instructions_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_alignTop="@id/no_favorite_text"
+        android:text="Click on any item from Home, and then tap the heart icon to add it to Favourites."
+        android:textSize="18sp"
+        android:textColor="#717171" />
+    <Button
+        android:id="@+id/Backtofood"
+        android:text="Add to Favourite"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </Button>
+</RelativeLayout>
