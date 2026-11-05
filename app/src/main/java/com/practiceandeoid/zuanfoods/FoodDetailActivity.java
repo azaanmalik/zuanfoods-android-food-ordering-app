@@ -47,9 +47,9 @@ public class FoodDetailActivity extends AppCompatActivity {
         food_image = findViewById(R.id.food_image);
         food_name.setText(intent.getStringExtra("food_name"));
 
-        food_price.setText(intent.getStringExtra("food price"));
+        food_price.setText(intent.getStringExtra("food_price"));
 
-        food_image.setImageResource(intent.getIntExtra("food image", R.drawable.foodimg1));
+        food_image.setImageResource(intent.getIntExtra("food_image", R.drawable.foodimg1));
         ordernow= findViewById(R.id.order_now);
 
         ordernow.setOnClickListener(new View.OnClickListener() {
